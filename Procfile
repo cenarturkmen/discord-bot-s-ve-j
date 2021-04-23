@@ -1,1 +1,1 @@
-worker: discord-bot-s-ve-j/main.py
+worker: python3 bot/main.py
