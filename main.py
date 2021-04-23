@@ -2,7 +2,8 @@ import os
 import discord
 
 client = discord.Client()
-
+token = open("token.txt", "r")
+print(token)
 @client.event
 async def on_message(message):
 
@@ -55,4 +56,4 @@ async def on_message(message):
         await message.channel.send("ben oynarim kanka")
         return 
         
-client.run("ODM0OTMwNTU2Mzk1NDU0NTA1.YIIDrA.HxCq7EJ9g82QwahnlFBjfat9zTs")
+client.run("ODM0OTMwNTU2Mzk1NDU0NTA1.YIIDrA.4rfmtbF6qrgyY3TKA5DEJPQcUmQ")
