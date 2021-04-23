@@ -2,8 +2,8 @@ import os
 import discord
 
 client = discord.Client()
-token = open("token.txt", "r")
-print(token)
+token = os.getenv("DISCORD_BOT_TOKEN")
+
 @client.event
 async def on_message(message):
 
@@ -56,4 +56,4 @@ async def on_message(message):
         await message.channel.send("ben oynarim kanka")
         return 
         
-client.run("ODM0OTMwNTU2Mzk1NDU0NTA1.YIIDrA.4rfmtbF6qrgyY3TKA5DEJPQcUmQ")
+client.run(token)
