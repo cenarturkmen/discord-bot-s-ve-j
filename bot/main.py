@@ -58,7 +58,7 @@ async def on_message(message):
 
     if message.content.startswith("5v5"):
         await message.channel.send("ben oynarim kanka yaz beni")
-        await message.channel.send(discord.emoji("\:laughing:"))
+        await message.channel.send(reaction.embeds[0])
         return 
     
     if message.content.startswith("gülemem"):
