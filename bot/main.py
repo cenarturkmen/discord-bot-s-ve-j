@@ -12,7 +12,7 @@ async def on_message(message):
         return 
     
     if message.content.startswith("mestan") or message.content.startswith("Mestan") or message.content.startswith("MESTAN"):
-        await message.channel.send("estan açılma artık")
+        await message.channel.send("mestan açılma artık")
         return 
     c = 0
     for x in message.content:
