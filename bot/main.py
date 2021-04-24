@@ -7,7 +7,7 @@ token = os.getenv("DISCORD_BOT_TOKEN")
 @client.event
 async def on_message(message):
 
-    if message.content.startswith('31'):
+    if message.content.startswith("31"):
         await message.channel.send("hahahaha")
         return 
     
@@ -51,22 +51,31 @@ async def on_message(message):
             if int(a) / int(b) == 31:
                 await message.channel.send("cok iyi saka kanka en son bakkalda gördüm : bu işareti ")
                 return
+                
 
     if "31" in message.content:
         await message.channel.send("gizli saka")
         return
 
     if message.content.startswith("5v5"):
-        await message.channel.send("ben oynarim kanka yaz beni")
-        await message.channel.send(reaction.embeds[0])
-        return 
-    
+                    channel = message.channel
+                    await channel.send("yukarıyı oyla")
+                    emoji = "\N{THUMBS UP SIGN}"
+                    emoji2 = "\N{THUMBS DOWN SIGN}"
+                    # or "\U0001f44d" or "👍"
+                    await message.add_reaction(emoji)
+                    await message.add_reaction(emoji2)
+
+
+
     if message.content.startswith("gülemem"):
-        await message.channel.send("gülemem kanka gülemem s'nin yanına j gelmeyince gülemem")
+        await message.channel.send("gülemem kanka gülemem s"nin yanına j gelmeyince gülemem")
         return
     
     if message.content.startswith("helikopter"):
         await message.channel.send("pat pat")
         return
+
+
 
 client.run(token)
