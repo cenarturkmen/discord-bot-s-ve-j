@@ -1,4 +1,4 @@
 discord.py
 psycopg2
 pandas
-sqlalchemy
+sqlalchemy.create_engine
