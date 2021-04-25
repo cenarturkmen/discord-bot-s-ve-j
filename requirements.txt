@@ -1,1 +1,4 @@
 discord.py
+psycopg2
+pandas
+sqlalchemy

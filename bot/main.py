@@ -1,14 +1,23 @@
 import os
 import discord
+import psycopg2
+import pandas as pd
+from sqlalchemy import create_engine
 
 client = discord.Client()
 token = os.getenv("DISCORD_BOT_TOKEN")
+sql = os.getenv("DATABASE_URL")
+
+df = pd.read_csv("dg.cvs")
+engine = create_engine(sql, echo = False)
+df.to_sql("deneme", con=engine,if_exists="append")
 
 @client.event
 async def on_message(message):
 
     if message.content.startswith("31"):
         await message.channel.send("hahahaha")
+        await message.channel.send(engine.execute("SELECT * FROM deneme").fetchone())
         return 
     
     if message.content.startswith("mestan") or message.content.startswith("Mestan") or message.content.startswith("MESTAN"):
