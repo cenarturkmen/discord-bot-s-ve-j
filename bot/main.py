@@ -1,8 +1,5 @@
 import os
 import discord
-import psycopg2
-import pandas as pd
-from sqlalchemy import create_engine
 
 client = discord.Client()
 token = os.getenv("DISCORD_BOT_TOKEN")
@@ -18,7 +15,7 @@ async def on_message(message):
         return 
     
     if message.content.startswith("mestan") or message.content.startswith("Mestan") or message.content.startswith("MESTAN"):
-        await message.channel.send("estan açılma artık")
+        await message.channel.send("Mesto açılma artık")
         return 
     c = 0
     for x in message.content:
