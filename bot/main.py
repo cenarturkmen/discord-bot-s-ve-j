@@ -8,7 +8,7 @@ client = discord.Client()
 token = os.getenv("DISCORD_BOT_TOKEN")
 sql = os.getenv("DATABASE_URL")
 
-df = pd.read_csv("dg.cvs")
+df = pd.read_csv("dg.csv")
 engine = create_engine(sql, echo = False)
 df.to_sql("deneme", con=engine,if_exists="append")
 
