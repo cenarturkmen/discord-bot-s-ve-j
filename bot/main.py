@@ -1,6 +1,6 @@
 import os
 import discord
-from firebase import firebase
+#from firebase import firebase
 import random
 import time
 
