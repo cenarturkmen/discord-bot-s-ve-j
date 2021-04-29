@@ -156,7 +156,7 @@ async def on_message(message):
 
 
     if message.content.startswith("gülemem"):
-        await message.channel.send("gülemem kanka gülemem s nin yanına j gelmeyince gülemem")
+        await message.channel.send("Gulemem kanka Gulemem s nin yanına j gelmeyince Gulemem")
     
     if message.content.startswith("helikopter"):
         await message.channel.send("pat pat")
