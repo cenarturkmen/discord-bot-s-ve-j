@@ -97,7 +97,7 @@ async def on_message(message):
 ###############################################
 
     if message.content.startswith("!commands"):
-        await message.channel.send("31, 5v5, gulemem, helikopter","topla","cikar","carp","bol","karekok")
+        await message.channel.send("31, 5v5, gulemem, helikopter,topla,cikar,bol,carp,karekok")
 
     if message.content.startswith("31"):
         await message.channel.send("hahahaha")
@@ -210,7 +210,7 @@ async def carp(ctx,x:float,y:float):
     await ctx.send(res)
 
 @commands.command()
-async def karekok(ctx,x:float,y:float):
+async def karekok(ctx,x:float):
     res=sqrt(x)
     await ctx.send(res)
 
