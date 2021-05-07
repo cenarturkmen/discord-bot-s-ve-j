@@ -3,9 +3,13 @@ import discord
 #from firebase import firebase
 import random
 import time
+import math
+from discord.ext import commands
 
 client = discord.Client()
 token = os.getenv("DISCORD_BOT_TOKEN")
+
+
 """deneme = firebase.FirebaseApplication("https://svej-d01df-default-rtdb.europe-west1.firebasedatabase.app", None)
 query = deneme.get("/deneme", "caner")
 print(query)
@@ -93,7 +97,7 @@ async def on_message(message):
 ###############################################
 
     if message.content.startswith("commands"):
-        await message.channel.send("31, 5v5, gulemem, helikopter")
+        await message.channel.send("31, 5v5, gulemem, helikopter","topla","cikar","carp","bol","karekok")
 
     if message.content.startswith("31"):
         await message.channel.send("hahahaha")
@@ -102,6 +106,7 @@ async def on_message(message):
     if message.content.startswith("mestan") or message.content.startswith("Mestan") or message.content.startswith("MESTAN"):
         await message.channel.send("Mesto açılma artık")
         return 
+        
     c = 0
     for x in message.content:
         c += 1
@@ -161,6 +166,54 @@ async def on_message(message):
     if message.content.startswith("helikopter"):
         await message.channel.send("pat pat")
         return
+    
+    if message.content.startswith("salam alaykum"):
+        await message.channel.send("aleykum salam")
+        
+
+
+
+def sub(x:float,y: float):
+    return x-y
+
+def add(x:float,y: float):
+    return x+y
+
+def div(x:float,y:float):
+    return x/y
+
+def sqrt(x:float):
+    return math.sqrt((x))
+
+def multi(x:float,y:float):
+    return x*y
+
+
+@commands.command()
+async def topla(ctx,x:float,y:float):
+    res=add(x,y)
+    await ctx.send(res)
+
+@commands.command()
+async def cikar(ctx,x:float,y:float):
+    res=sub(x,y)
+    await ctx.send(res)
+
+@commands.command()
+async def bol(ctx,x:float,y:float):
+    res=div(x,y)
+    await ctx.send(res)
+
+@commands.command()
+async def carp(ctx,x:float,y:float):
+    res=multi(x, y)
+    await ctx.send(res)
+
+@commands.command()
+async def karekok(ctx,x:float,y:float):
+    res=sqrt(x)
+    await ctx.send(res)
+
 
 
 client.run(token)
