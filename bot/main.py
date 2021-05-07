@@ -96,7 +96,7 @@ async def on_message(message):
             n= n+1"""
 ###############################################
 
-    if message.content.startswith("commands"):
+    if message.content.startswith("!commands"):
         await message.channel.send("31, 5v5, gulemem, helikopter","topla","cikar","carp","bol","karekok")
 
     if message.content.startswith("31"):
