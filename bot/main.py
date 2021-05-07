@@ -86,6 +86,9 @@ async def on_message(message):
     if message.content.startswith("salam alaykum"):
         await message.channel.send("aleykum salam")
         
+    @bot.command()
+    async def test(ctx, arg):
+        await ctx.send(arg)
 
 
 
@@ -104,9 +107,7 @@ def sqrt(x:float):
 def multi(x:float,y:float):
     return x*y
 
-@bot.command()
-async def test(ctx, arg):
-    await ctx.send(arg)
+
 
 @commands.command()
 async def topla(ctx,x:float,y:float):
