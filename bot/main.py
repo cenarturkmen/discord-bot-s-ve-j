@@ -12,7 +12,7 @@ bot = commands.Bot(command_prefix="!")
 @client.event
 async def on_message(message):
 
-    if message.content.startswith("!commands"):
+    if message.content.startswith("commands"):
         await message.channel.send("31, 5v5, gulemem, helikopter,topla,cikar,bol,carp,karekok")
 
     if message.content.startswith("31"):
@@ -104,7 +104,7 @@ def sqrt(x:float):
 def multi(x:float,y:float):
     return x*y
 
-@commands.command()
+@bot.command()
 async def test(ctx, arg):
     await ctx.send(arg)
 
